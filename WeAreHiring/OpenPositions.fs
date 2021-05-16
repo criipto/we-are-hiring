@@ -24,26 +24,34 @@ module ``Production system`` =
     type SoftwareWork = | ``Human knowledge work`` of SchedulingParadigm * Bottleneck
     type ManagementParadigm = | ``Make The Work work`` of SoftwareWork
 
+    type Ends = | Sovereignty | Privacy
     type Adversaries =
         | ``Identity theft``
         | Fraud
         | Trolling
         | ``Surveillance capitalism``
-    type Means = | ``Pick a fight with`` of Adversaries list
-    type Purpose =
-        | ``Make people sovereign online as well as offline`` of Means
+    type Means =
+        | ``Uphold core values`` of Ends list
+        | ``Defend against`` of Adversaries list
+    type Purpose = | ``Safety online for humans`` of Means list
     type Company = | SoftwareFactory of Purpose * ManagementParadigm * ManufacturingProcess
 
 module Criipto =
     open ``Production system``
 
     let purpose =
-        ``Make people sovereign online as well as offline`` (
-            ``Pick a fight with`` [
-                ``Identity theft``
-                Fraud
-                Trolling
-                ``Surveillance capitalism``
+        ``Safety online for humans`` (
+            [
+                ``Uphold core values`` [
+                    Sovereignty
+                    Privacy
+                ]
+                ``Defend against`` [
+                    ``Identity theft``
+                    Fraud
+                    Trolling
+                    ``Surveillance capitalism``
+                ]
             ]
         )
     let humaneManagement =
