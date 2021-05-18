@@ -14,7 +14,7 @@ module ``Production system`` =
     type GuardRails = | ``Poka yoke``
     type QualityControl = | Humane of InspectionParadigm * TestingPreference * ResilienceMode * GuardRails
 
-    type Flow = | SinglePiece
+    type Flow = | OnePiece
     type Workflow = | Kanban of Flow
     type DeliveryMode = | Continuous 
     type ManufacturingProcess = | ``Lean and agile`` of QualityControl * Workflow * DeliveryMode
@@ -64,9 +64,9 @@ module Criipto =
         Humane (
             ``Build quality in``, Automated, ``Safe to fail``, ``Poka yoke``
         )
-    let singlePieceFlow = SinglePiece |> Kanban
+    let onePieceFlow = OnePiece |> Kanban
     let continuousDelivery = Continuous
-    let steadyCadence = highQuality, singlePieceFlow, continuousDelivery
+    let steadyCadence = highQuality, onePieceFlow, continuousDelivery
     let leanManufacturing = ``Lean and agile`` steadyCadence
     let criipto = SoftwareFactory (purpose, humaneManagement, leanManufacturing)
 
