@@ -14,3 +14,6 @@ At the heart of this are the various _electronic identity_ (aka e-ID) schemes of
 
 Most of these schemes are exposed over proprietary, non-standard protocols.
 Criipto shrink-wraps these in an easy-to-use industry-standard interface, and also provides a self-service management interface where our customers can set up the required configuration.
+
+## The Workplace
+We favor a blend of 'at the office' and remote work - let us know what your preferences are, so we can work out the details together.
